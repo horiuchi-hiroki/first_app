@@ -28,10 +28,14 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 # PostgreSQLをProductionで使用
-gem 'pg', :group => [:production]
+group :production do 
+	gem 'pg', '0.15.1'
+	gem 'rails_12factor', '0.0.2'
+end
+#gem 'pg', :group => [:production]
 
 # Heroku実行用のサポートgem
-gem 'rails_12factor', group::production
+#gem 'rails_12factor', :group => [:production]
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
